@@ -8,14 +8,15 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 
-/**
- **
- * <p>Created by irina on 18.05.2021.</p>
- * <p>Project: spring-resttemplate-test1</p>
- **
- */
+// For TestRestTemplate
 @RestController
 public class MyController2 {
+
+    @GetMapping("/test5/{pv1}/{pv2}")
+    public String test5(@PathVariable String pv1, @PathVariable String pv2){
+        return "test5 "+pv1+pv2;
+    }
+
     @GetMapping("/test6")
     public String test6(){
         return "test6";

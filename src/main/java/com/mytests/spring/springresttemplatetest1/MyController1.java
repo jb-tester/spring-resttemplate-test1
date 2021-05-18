@@ -1,19 +1,11 @@
 package com.mytests.spring.springresttemplatetest1;
 
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.net.URI;
-
-/**
- * *
- * <p>Created by irina on 23.10.2020.</p>
- * <p>Project: spring-resttemplate-test1</p>
- * *
- */
+// For RestTemplate
 @RestController
 public class MyController1 {
     @GetMapping("/test0")
@@ -37,9 +29,5 @@ public class MyController1 {
         return "test4 ";
     }
 
-    @GetMapping("/test5/{pv1}/{pv2}")
-    public String test5(@PathVariable String pv1, @PathVariable String pv2){
-        return "test5 "+pv1+pv2;
-    }
 
 }
